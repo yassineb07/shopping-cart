@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  border-bottom: 2px solid black;
+}
+
+.storeName {
+  font-size: 2.6rem;
+}
+
+.nav {
+  display: flex;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+}
