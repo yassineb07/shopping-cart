@@ -10,8 +10,14 @@ const Home = () => {
       <Announcement text={'welcome to home'} />
       <Header />
       <HeroSection />
-      <ProductsSection title={'Featured Products'} />
-      <ProductsSection title={'Best Sellers'} />
+      <section className={styles.productSection}>
+        <h1 className={styles.productSectionTitle}>Featured Products</h1>
+        <ProductsSection />
+      </section>
+      <section className={styles.productSection}>
+        <h1 className={styles.productSectionTitle}>Best Sellers</h1>
+        <ProductsSection />
+      </section>
     </div>
   );
 };

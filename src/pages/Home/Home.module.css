@@ -1,1 +1,9 @@
+.productSection {
+  padding: 1rem 3rem;
+}
 
+.productSectionTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
