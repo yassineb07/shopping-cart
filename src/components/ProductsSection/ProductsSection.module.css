@@ -1,0 +1,16 @@
+.section {
+  height: 400px;
+  padding: 1rem 3rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
