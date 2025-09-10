@@ -1,0 +1,41 @@
+.section {
+  height: 60vh; /* take full screen height */
+  background-image: url('../../assets/force-majeure-unsplash-hero-desktop.jpg');
+  background-size: cover; /* scale nicely */
+  background-position: center; /* keep focus in middle */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  position: relative; /* so it's above overlay */
+  z-index: 1;
+}
+p {
+  font-size: 4rem;
+}
+
+button {
+  padding: 1rem 1.6rem;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+button:hover {
+  background-color: #808080a8;
+}
