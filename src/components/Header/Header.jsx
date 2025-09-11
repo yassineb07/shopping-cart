@@ -6,9 +6,15 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.storeName}>Store Name</div>
       <nav className={styles.nav}>
-        <Link to="/">Home</Link>
-        <Link to="/store">Store</Link>
-        <Link to="/cart">Cart</Link>
+        <Link to="/" className={styles.link}>
+          Home
+        </Link>
+        <Link to="/store" className={styles.link}>
+          Store
+        </Link>
+        <Link to="/cart" className={styles.link}>
+          Cart
+        </Link>
       </nav>
     </header>
   );
