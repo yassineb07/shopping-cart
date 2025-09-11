@@ -22,11 +22,12 @@
   position: relative; /* so it's above overlay */
   z-index: 1;
 }
-p {
+
+.text {
   font-size: 4rem;
 }
 
-button {
+.btn {
   padding: 1rem 1.6rem;
   color: white;
   background-color: transparent;
@@ -36,6 +37,6 @@ button {
   font-size: 1.2rem;
   font-weight: 600;
 }
-button:hover {
+.btn:hover {
   background-color: #808080a8;
 }

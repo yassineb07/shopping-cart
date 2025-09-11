@@ -4,8 +4,8 @@ const HeroSection = () => {
   return (
     <div className={styles.section}>
       <div className={styles.content}>
-        <p>New arrivals</p>
-        <button>Shop Now</button>
+        <p className={styles.text}>New arrivals</p>
+        <button className={styles.btn}>Shop Now</button>
       </div>
     </div>
   );
