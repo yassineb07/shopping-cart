@@ -1,15 +1,15 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: baseline;
   align-items: flex-start;
   width: 250px;
-  background-color: #f4f4f4;
 }
 
 .img {
   width: 250px;
   height: 250px;
+  background-color: #f4f4f4;
 }
 
 .title {
@@ -19,4 +19,8 @@
 
 .price {
   font-size: 1.2rem;
+}
+
+.add {
+  align-self: flex-end;
 }
