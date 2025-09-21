@@ -3,7 +3,7 @@ import ProductCard from '../ProductCard/ProductCard';
 
 const ProductsSection = ({ products }) => {
   const productsList = products.map((product) => {
-    return <ProductCard product={product} />;
+    return <ProductCard product={product} key={product.id} />;
   });
   return <section className={styles.products}>{productsList}</section>;
 };
