@@ -9,6 +9,7 @@ const App = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const getProductsData = async () => {
@@ -35,7 +36,7 @@ const App = () => {
       <Header />
       {loading && <div className={styles.loading}>Loading data...</div>}
       {error && <div className={styles.error}>{error}</div>}
-      {data && <Outlet context={{ data }} />}
+      {data && <Outlet context={{ data, cartState: [cart, setCart] }} />}
     </div>
   );
 };
