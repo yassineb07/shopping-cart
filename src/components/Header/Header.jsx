@@ -1,7 +1,11 @@
 import { Link } from 'react-router';
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({ cart }) => {
+  const totalItems = cart.reduce((total, product) => {
+    return total + product.quantity;
+  }, 0);
+
   return (
     <header className={styles.header}>
       <div className={styles.storeName}>Store Name</div>
@@ -14,6 +18,9 @@ const Header = () => {
         </Link>
         <Link to="/cart" className={styles.link}>
           Cart
+          {totalItems === 0 ? null : (
+            <div className={styles.totalItems}>{totalItems}</div>
+          )}
         </Link>
       </nav>
     </header>

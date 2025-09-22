@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div>
       <Announcement text={'welcome to App'} />
-      <Header />
+      <Header cart={cart} />
       {loading && <div className={styles.loading}>Loading data...</div>}
       {error && <div className={styles.error}>{error}</div>}
       {data && <Outlet context={{ data, cartState: [cart, setCart] }} />}
