@@ -16,6 +16,9 @@ li {
   font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .total {
@@ -23,4 +26,16 @@ li {
   justify-content: space-between;
   padding: 1rem 4rem;
   font-size: 2rem;
+}
+
+.totalItems {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.171);
+  font-size: 1.5rem;
+  font-weight: 500;
 }

@@ -14,9 +14,16 @@ const Cart = () => {
     return total + product.price;
   }, 0);
 
+  const totalItems = cart.reduce((total, product) => {
+    return total + product.quantity;
+  }, 0);
+
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Cart</h1>
+      <h1 className={styles.title}>
+        Cart
+        <div className={styles.totalItems}>{totalItems}</div>
+      </h1>
       <ul className={styles.cart}>{cartItems}</ul>
       <div className={styles.total}>
         <p>Total</p>
