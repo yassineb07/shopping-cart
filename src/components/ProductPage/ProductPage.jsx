@@ -1,20 +1,27 @@
 import styles from './ProductPage.module.css';
-const ProductPage = () => {
+
+const ProductPage = ({ product }) => {
   return (
     <div className={styles.product}>
       <div>
-        <img src="" alt="" className={styles.image} />
+        <img src={product.image} alt="" className={styles.image} />
       </div>
       <div className={styles.details}>
-        <p className={styles.name}>product name</p>
+        <p className={styles.name}>{product.title}</p>
         <div className={styles.quantity}>
           <button className={styles.increment}>-</button>
-          <input type="number" name="" id="" className={styles.input} />
+          <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            className={styles.input}
+            value={product.quantity}
+          />
           <button className={styles.increment}>+</button>
         </div>
       </div>
       <div>
-        <div className={styles.price}>199</div>
+        <div className={styles.price}>{product.price}</div>
       </div>
     </div>
   );
