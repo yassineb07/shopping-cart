@@ -45,7 +45,10 @@ const Cart = () => {
 
     const newCart = cart.map((product) => {
       if (product.id === productId) {
-        return { ...product, quantity: product.quantity - 1 };
+        return {
+          ...product,
+          quantity: product.quantity > 1 ? product.quantity - 1 : 1,
+        };
       } else {
         return product;
       }

@@ -24,6 +24,7 @@ const ProductPage = ({
             className={styles.input}
             value={product.quantity}
             onChange={onQualityChange}
+            min={1}
           />
           <button className={styles.increment} onClick={onQualityPlus}>
             +
