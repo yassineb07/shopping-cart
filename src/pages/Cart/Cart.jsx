@@ -22,12 +22,46 @@ const Cart = () => {
     setCart(newCart);
   };
 
+  const handleQualityPlus = (e) => {
+    const productId = Number(
+      e.target.parentElement.parentElement.parentElement.id
+    );
+
+    const newCart = cart.map((product) => {
+      if (product.id === productId) {
+        return { ...product, quantity: product.quantity + 1 };
+      } else {
+        return product;
+      }
+    });
+
+    setCart(newCart);
+  };
+
+  const handleQualityMinus = (e) => {
+    const productId = Number(
+      e.target.parentElement.parentElement.parentElement.id
+    );
+
+    const newCart = cart.map((product) => {
+      if (product.id === productId) {
+        return { ...product, quantity: product.quantity - 1 };
+      } else {
+        return product;
+      }
+    });
+
+    setCart(newCart);
+  };
+
   const cartItems = cart.map((product) => {
     return (
       <ProductPage
         product={product}
         key={product.id}
         onQualityChange={handleQualityChange}
+        onQualityPlus={handleQualityPlus}
+        onQualityMinus={handleQualityMinus}
       />
     );
   });
