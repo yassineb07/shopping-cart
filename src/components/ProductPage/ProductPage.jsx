@@ -6,6 +6,8 @@ const ProductPage = ({
   onQualityPlus,
   onQualityMinus,
 }) => {
+  const totalPrice = product.price * product.quantity;
+
   return (
     <div className={styles.product} id={product.id}>
       <div>
@@ -32,7 +34,7 @@ const ProductPage = ({
         </div>
       </div>
       <div>
-        <div className={styles.price}>{product.price}</div>
+        <div className={styles.price}>{totalPrice.toFixed(2)}</div>
       </div>
     </div>
   );
