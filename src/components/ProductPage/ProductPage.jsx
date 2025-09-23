@@ -5,6 +5,7 @@ const ProductPage = ({
   onQualityChange,
   onQualityPlus,
   onQualityMinus,
+  onProductDelete,
 }) => {
   const totalPrice = product.price * product.quantity;
 
@@ -32,6 +33,9 @@ const ProductPage = ({
             +
           </button>
         </div>
+        <button className={styles.delete} onClick={onProductDelete}>
+          delete
+        </button>
       </div>
       <div>
         <div className={styles.price}>{totalPrice.toFixed(2)}</div>

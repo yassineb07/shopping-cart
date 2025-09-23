@@ -57,6 +57,14 @@ const Cart = () => {
     setCart(newCart);
   };
 
+  const handleProductDelete = (e) => {
+    const productId = Number(e.target.parentElement.parentElement.id);
+    const newCart = cart.filter((product) => {
+      return product.id !== productId;
+    });
+    setCart(newCart);
+  };
+
   const cartItems = cart.map((product) => {
     return (
       <ProductPage
@@ -65,6 +73,7 @@ const Cart = () => {
         onQualityChange={handleQualityChange}
         onQualityPlus={handleQualityPlus}
         onQualityMinus={handleQualityMinus}
+        onProductDelete={handleProductDelete}
       />
     );
   });
