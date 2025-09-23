@@ -4,10 +4,32 @@ import { useOutletContext } from 'react-router';
 
 const Cart = () => {
   const { cartState } = useOutletContext();
-  const [cart] = cartState;
+  const [cart, setCart] = cartState;
+
+  const handleQualityChange = (e) => {
+    const productId = Number(
+      e.target.parentElement.parentElement.parentElement.id
+    );
+
+    const newCart = cart.map((product) => {
+      if (product.id === productId) {
+        return { ...product, quantity: Number(e.target.value) };
+      } else {
+        return product;
+      }
+    });
+
+    setCart(newCart);
+  };
 
   const cartItems = cart.map((product) => {
-    return <ProductPage product={product} key={product.id} />;
+    return (
+      <ProductPage
+        product={product}
+        key={product.id}
+        onQualityChange={handleQualityChange}
+      />
+    );
   });
 
   const totalPrice = cart.reduce((total, product) => {
@@ -27,7 +49,7 @@ const Cart = () => {
       <ul className={styles.cart}>{cartItems}</ul>
       <div className={styles.total}>
         <p>Total</p>
-        <p>${totalPrice}</p>
+        <p>${totalPrice.toFixed(2)}</p>
       </div>
     </main>
   );

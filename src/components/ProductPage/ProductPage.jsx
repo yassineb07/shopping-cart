@@ -1,8 +1,8 @@
 import styles from './ProductPage.module.css';
 
-const ProductPage = ({ product }) => {
+const ProductPage = ({ product, onQualityChange }) => {
   return (
-    <div className={styles.product}>
+    <div className={styles.product} id={product.id}>
       <div>
         <img src={product.image} alt="" className={styles.image} />
       </div>
@@ -16,6 +16,7 @@ const ProductPage = ({ product }) => {
             id="quantity"
             className={styles.input}
             value={product.quantity}
+            onChange={onQualityChange}
           />
           <button className={styles.increment}>+</button>
         </div>
